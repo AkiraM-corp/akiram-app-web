@@ -3,12 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <title>AkiraM</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .logo-container {
+      display: inline-block;
+      background: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .logo-container img {
+      max-width: 160px;
+      height: auto;
+      display: block;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    main h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      color: #111;
+    }
+
+    footer {
+      background: #111;
+      color: #ddd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Logo da empresa -->
-  <img src="./assets/Logo.png" alt="Logo da Akiram Consultoria" width="150">
+  <header>
+    <!-- Logo em destaque -->
+    <div class="logo-container">
+      <img src="./assets/Logo.png" alt="Logo da Akiram Consultoria">
+    </div>
+    <h1>Bem-vindo à AkiraM</h1>
+    <p>Soluções em TI para empresas de tecnologia</p>
+  </header>
 
-  <h1>Bem-vindo à AkiraM</h1>
-  <p>Soluções em TI para empresas de tecnologia</p>
+  <main>
+    <h2>Nossos Serviços</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Consultoria em Cloud</h3>
+        <p>Auxiliamos empresas na migração e otimização de soluções em nuvem.</p>
+      </div>
+      <div class="card">
+        <h3>Desenvolvimento de Software</h3>
+        <p>Projetos personalizados em Java, Python e tecnologias modernas.</p>
+      </div>
+      <div class="card">
+        <h3>Segurança da Informação</h3>
+        <p>Implementamos práticas para proteger os dados e sistemas da sua empresa.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 AkiraM Consultoria - Todos os direitos reservados</p>
+    <p>Contato: contato@akiram.com.br</p>
+  </footer>
 </body>
 </html>
