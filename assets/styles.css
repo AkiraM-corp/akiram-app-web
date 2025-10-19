@@ -231,3 +231,15 @@ body{ padding-bottom: env(safe-area-inset-bottom); }
     color: #000;
   }
 }
+
+/* ===== Logo Responsiva ===== */
+
+/* Mostra logo completa e oculta favicon no desktop */
+.logo-desktop { display: inline-block; height: 44px; width: auto; }
+.logo-mobile { display: none; }
+
+/* No mobile, inverte: mostra favicon, oculta logo completa */
+@media (max-width: 768px) {
+  .logo-desktop { display: none; }
+  .logo-mobile { display: inline-block; height: 38px; width: auto; }
+}
