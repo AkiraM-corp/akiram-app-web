@@ -58,7 +58,7 @@ h1{font-family:"Playfair Display",serif;font-size:clamp(36px,4.2vw,56px);line-he
 .hero-card{background:linear-gradient(180deg,var(--card),#10141c);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;box-shadow:var(--shadow)}
 .hero-card b{color:#fff}
 .hero-media{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
-.badge{position:absolute;top:14px;left:14px;background:rgba(198,161,91,.14);color:var(--accent);padding:6px 10px;border-radius:999px;border:1px solid rgba(198,161,91,.35);font-size:.85rem}
+.badge{position:absolute;top:14px;left:50%;transform: translateX(-50%);background:rgba(198,161,91,.14);color:var(--accent);padding:6px 10px;border-radius:999px;border:1px solid rgba(198,161,91,.35);font-size:.85rem}
 
 /* Sections */
 section{padding:64px 0;border-bottom:1px solid var(--border)}
