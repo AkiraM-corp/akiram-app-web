@@ -89,3 +89,71 @@ footer{padding:30px 0;color:var(--muted)}
 @media (max-width: 640px){
   .hero-cards{grid-template-columns:1fr}
 }
+
+/* ===== Ajustes MOBILE (colar no final de styles.css) ===== */
+
+/* Cabeçalho: pills mais compactas e scroll horizontal suave */
+@media (max-width: 768px){
+  header.site-header .container.nav{ padding: 10px 14px; }
+  .brand img{ width: 36px; height: 36px; }
+  .brand .title{ font-size: 1.1rem; }
+
+  .actions{
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .actions::-webkit-scrollbar{ display:none; }
+
+  .btn{ padding: 8px 12px; border-radius: 10px; font-size: .95rem; }
+  .btn.primary{ padding: 8px 12px; }
+}
+
+/* Hero: tipografia mais contida e grid em 1 coluna, imagem abaixo do texto */
+@media (max-width: 768px){
+  .hero{ padding: 56px 0 28px; }
+  h1{ font-size: clamp(28px, 8vw, 36px); line-height: 1.15; margin-bottom: 14px; }
+  .subtitle{ font-size: 1rem; }
+  .hero-grid{ grid-template-columns: 1fr; gap: 22px; }
+  .hero-media{ order: 2; }
+  .hero-cards{ grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* Containers com respiro em telas menores e safe-area do iOS */
+@supports(padding:max(0px)){
+  .container{ padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+}
+body{ padding-bottom: env(safe-area-inset-bottom); }
+
+/* Planos: 1 coluna, cartões iguais em altura e botão alinhado no rodapé */
+@media (max-width: 768px){
+  .plans{ grid-template-columns: 1fr; gap: 14px; }
+  .plan{
+    display: flex; flex-direction: column; justify-content: space-between;
+    height: 100%;
+  }
+  .plan h3{ margin-top: 6px; }
+  .plan ul{ flex-grow: 1; margin-bottom: 14px; }
+  .plan .btn{ align-self: stretch; text-align: center; }
+  .price{ font-size: 24px; }
+  .pill{ font-size: .85rem; }
+}
+
+/* Cards (steps, commit, cta) mais compactos */
+@media (max-width: 768px){
+  .steps{ grid-template-columns: 1fr; gap: 12px; }
+  .commit{ grid-template-columns: 1fr; gap: 12px; }
+  .cta{ grid-template-columns: 1fr; gap: 14px; }
+  .cta-card{ padding: 16px; }
+}
+
+/* Imagens: sombra leve e raio consistente para dar “acabamento” sem pesar */
+@media (max-width: 768px){
+  .hero-media img,
+  .cta-card img{
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.45);
+  }
+}
