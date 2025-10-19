@@ -234,12 +234,15 @@ body{ padding-bottom: env(safe-area-inset-bottom); }
 
 /* ===== Logo Responsiva ===== */
 
-/* Mostra logo completa e oculta favicon no desktop */
-.logo-desktop { display: inline-block; height: 44px; width: auto; }
-.logo-mobile { display: none; }
+/* No desktop: mostra logo completa e oculta o favicon */
+.brand img.logo-desktop { display: inline-block !important; height: 44px; width: auto; }
+.brand img.logo-mobile  { display: none !important; }
 
-/* No mobile, inverte: mostra favicon, oculta logo completa */
+/* No mobile: inverte — mostra favicon e esconde a logo completa */
 @media (max-width: 768px) {
-  .logo-desktop { display: none; }
-  .logo-mobile { display: inline-block; height: 38px; width: auto; }
+  .brand img.logo-desktop { display: none !important; }
+  .brand img.logo-mobile  { display: inline-block !important; height: 38px; width: auto; }
 }
+
+/* Evita que a regra genérica .brand img altere os tamanhos das duas versões */
+.brand img { height: auto; width: auto; }
