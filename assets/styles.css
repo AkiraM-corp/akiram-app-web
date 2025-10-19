@@ -176,3 +176,58 @@ body{ padding-bottom: env(safe-area-inset-bottom); }
     text-align: center;
   }
 }
+
+/* ===== Ajuste Header (Mobile) ===== */
+@media (max-width: 768px) {
+
+  header.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Container do header */
+  header.site-header .container.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+
+  /* Logo menor */
+  .brand img {
+    height: 34px;
+    width: auto;
+  }
+
+  /* Navegação horizontal rolável */
+  nav.actions {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 6px 0;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav.actions::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Botões menores e elegantes */
+  nav.actions .btn {
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  nav.actions .btn.primary {
+    background-color: #d8b36c;
+    color: #000;
+  }
+}
