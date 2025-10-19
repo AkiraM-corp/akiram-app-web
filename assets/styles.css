@@ -23,7 +23,7 @@ img{max-width:100%;display:block}
 header.site-header{position:sticky;top:0;z-index:50;background:rgba(11,13,17,.6);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{display:flex;align-items:center;gap:14px}
-.brand img{width:44px;height:44px}
+.brand img{width:auto;height:auto}
 .brand .title{font-family:"Playfair Display",serif;font-weight:600;letter-spacing:.4px}
 .nav .actions{display:flex;gap:10px}
 .btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--border);padding:10px 14px;border-radius:12px;background:transparent;color:var(--text);transition:transform .12s ease,background .2s ease,border-color .2s ease;box-shadow:none;cursor:pointer}
@@ -95,7 +95,7 @@ footer{padding:30px 0;color:var(--muted)}
 /* Cabeçalho: pills mais compactas e scroll horizontal suave */
 @media (max-width: 768px){
   header.site-header .container.nav{ padding: 10px 14px; }
-  .brand img{ width: 36px; height: 36px; }
+  .brand img{ width: auto; height: auto; }
   .brand .title{ font-size: 1.1rem; }
 
   .actions{
@@ -246,3 +246,9 @@ body{ padding-bottom: env(safe-area-inset-bottom); }
 
 /* Evita que a regra genérica .brand img altere os tamanhos das duas versões */
 .brand img { height: auto; width: auto; }
+
+@media screen and (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
