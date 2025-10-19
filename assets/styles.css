@@ -157,3 +157,22 @@ body{ padding-bottom: env(safe-area-inset-bottom); }
     box-shadow: 0 8px 24px rgba(0,0,0,.45);
   }
 }
+
+/* Força os cards de Contato a empilharem no mobile */
+@media (max-width: 768px){
+  /* O wrapper atual da sua seção Contato é .grid-2 */
+  #contato .grid-2{
+    grid-template-columns: 1fr !important; /* um embaixo do outro */
+    gap: 14px;
+  }
+
+  #contato .cta-card{
+    width: 100%;
+  }
+
+  /* Botão ocupa a largura toda para ficar mais elegante no mobile */
+  #contato .cta-card .btn{
+    width: 100%;
+    text-align: center;
+  }
+}
