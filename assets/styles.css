@@ -62,7 +62,7 @@ h1{font-family:"Playfair Display",serif;font-size:clamp(36px,4.2vw,56px);line-he
 
 /* Sections */
 section{padding:64px 0;border-bottom:1px solid var(--border)}
-h2.section-title{font-family:"Playfair Display",serif;font-size:clamp(26px,3vw,36px);margin:0 0 10px}
+h2{font-family:"Playfair Display",serif;font-size:clamp(28px,4.2vw,38px);line-height:1.1;margin:12px 0 16px}
 p.section-sub{color:var(--muted);margin:0 0 24px}
 
 /* Plans */
