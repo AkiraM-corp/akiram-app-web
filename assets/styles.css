@@ -198,7 +198,6 @@ body{padding-bottom:env(safe-area-inset-bottom)}
     grid-template-columns:1fr !important;
     gap:14px
   }
-  #contato .cta-card
 }
 
 /* Logo Responsiva */
