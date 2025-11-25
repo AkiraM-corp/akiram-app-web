@@ -120,7 +120,7 @@ footer{padding:30px 0;color:var(--muted)}
 }
 
 /* Header compacto + navegação rolável no mobile */
-@media (max-width:768px){
+@media (max-width:784px){
   header.site-header .container.nav{padding:10px 14px}
   .actions{
     gap:8px;overflow-x:auto;white-space:nowrap;
@@ -132,7 +132,7 @@ footer{padding:30px 0;color:var(--muted)}
 }
 
 /* Hero mobile */
-@media (max-width:768px){
+@media (max-width:784px){
   .hero{padding:56px 0 28px}
   h1{font-size:clamp(28px,8vw,36px);line-height:1.15;margin-bottom:14px}
   .subtitle{font-size:1rem}
@@ -148,7 +148,7 @@ footer{padding:30px 0;color:var(--muted)}
 body{padding-bottom:env(safe-area-inset-bottom)}
 
 /* Planos mobile: botão alinhado no rodapé */
-@media (max-width:768px){
+@media (max-width:784px){
   .plans{grid-template-columns:1fr;gap:14px}
   .plan{display:flex;flex-direction:column;justify-content:space-between;height:100%}
   .plan h3{margin-top:6px}
@@ -159,7 +159,7 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 }
 
 /* Cards compactos (steps, commitment, cta) */
-@media (max-width:768px){
+@media (max-width:784px){
   .steps{grid-template-columns:1fr;gap:12px}
   .commit{grid-template-columns:1fr;gap:12px}
   .cta{grid-template-columns:1fr;gap:14px}
@@ -167,7 +167,7 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 }
 
 /* Imagens com acabamento */
-@media (max-width:768px){
+@media (max-width:784px){
   .hero-media img,.cta-card img{
     border-radius:12px;
     box-shadow:0 8px 24px rgba(0,0,0,.45)
@@ -175,7 +175,7 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 }
 
 /* Contato: força empilhamento quando a seção usa .grid-2 */
-@media (max-width:768px){
+@media (max-width:784px){
   #contato .grid-2{
     grid-template-columns:1fr !important;
     gap:14px
@@ -186,12 +186,12 @@ body{padding-bottom:env(safe-area-inset-bottom)}
 /* Logo Responsiva */
 .brand img.logo-desktop{display:inline-block !important;height:44px;width:auto}
 .brand img.logo-mobile{display:none !important}
-@media (max-width:768px){
+@media (max-width:784px){
   .brand img.logo-desktop{display:none !important}
   .brand img.logo-mobile{display:inline-block !important;height:38px;width:auto}
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 784px) {
   .hide-mobile {
     display: none;
   }
