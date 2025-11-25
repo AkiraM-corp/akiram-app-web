@@ -126,9 +126,44 @@ footer{padding:30px 0;color:var(--muted)}
 .sep{height:1px;background:var(--border);margin:10px 0 18px}
 
 /* ===== Botão Voltar ao Topo ===== */
-#scrollTopBtn {position: fixed;bottom: 24px;right: 24px;width: 46px;height: 46px;border-radius: 50%;border: 1px solid rgba(255,255,255,0.08);background: linear-gradient(135deg, var(--accent), #e7c98a);color: #0b0d11;font-size: 1.6rem;font-weight: 600;cursor: pointer;box-shadow: 0 8px 24px rgba(0,0,0,.45);opacity: 0;visibility: hidden;transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;z-index: 1000;}
-#scrollTopBtn:hover {transform: translateY(-2px) scale(1.05);}
-#scrollTopBtn.show {opacity: 1;visibility: visible;}
+#scrollTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, var(--accent), #e7c98a);
+  color: #0b0d11;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(99, 99, 99, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+}
+
+#scrollTopBtn img.scroll-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+  filter: invert(1);
+}
+
+#scrollTopBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 
 /* -------- Responsive -------- */
