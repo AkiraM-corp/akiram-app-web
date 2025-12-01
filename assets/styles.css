@@ -413,11 +413,6 @@ footer {
 }
 
 @media (max-width: 784px) {
-  /* Header compacto + navegação rolável no mobile */
-  header.site-header .container.nav {
-    padding: 10px 14px;
-  }
-
   .actions {
     gap: 8px;
     overflow-x: auto;
