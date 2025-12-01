@@ -5,7 +5,7 @@ AkiraM Site — versão organizada (parciais + CSS externo)
 Estrutura:
 - index.html (carrega /partials via /assets/includes.js)
 - /assets (styles.css, includes.js, imagens e ícones)
-- /partials (header, hero, planos, processo, ecologico, contato, footer)
+- /partials (header, hero, planos, processo, contato, footer)
 
 Como testar localmente:
 - Inicie um servidor estático:
