@@ -39,6 +39,7 @@
     <section id="planos" data-include="/partials/planos.html"></section>
     <section id="processo" data-include="/partials/processo.html"></section>
     <section id="contato" data-include="/partials/contato.html"></section>
+    <section id="perguntas" data-include="/partials/perguntas.html"></section>
   </main>
 
   <div data-include="/partials/footer.html"></div>
@@ -76,5 +77,39 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
+
+  <!-- Script do FAQ -->
+  <script>
+    window.addEventListener("partials:loaded", () => {
+      const items = document.querySelectorAll(".faq-item");
+
+      items.forEach(item => {
+        const btn = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+
+        // garante que começa fechado
+        answer.style.maxHeight = "0px";
+
+        btn.addEventListener("click", () => {
+          const isOpen = item.classList.contains("active");
+
+          if (isOpen) {
+            // FECHAR: anima da altura atual até 0
+            answer.style.maxHeight = answer.scrollHeight + "px"; // fixa a altura atual
+            // força o reflow pra animação funcionar certinho
+            void answer.offsetHeight;
+            answer.style.maxHeight = "0px";
+            item.classList.remove("active");
+          } else {
+            // ABRIR: mede a altura do conteúdo e anima de 0 até ela
+            item.classList.add("active");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          }
+        });
+      });
+    });
+  </script>
+
+
 </body>
 </html>

@@ -378,6 +378,59 @@ footer {
   display: none !important;
 }
 
+/* FAQ Accordion (versão otimizada) */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: linear-gradient(180deg, var(--card), #1b1e25);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: var(--text);
+  padding: 16px 18px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question::after {
+  content: "+";
+  font-weight: 700;
+  color: var(--accent);
+  transition: transform .25s ease;
+}
+
+.faq-item.active .faq-question::after {
+  content: "–";
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  color: var(--muted);
+  transition: max-height .3s ease;
+}
+
+.faq-answer p {
+  margin: 0 0 16px;
+}
+
 /* Safe-area iOS */
 @supports (padding: max(0px)) {
   .container {
